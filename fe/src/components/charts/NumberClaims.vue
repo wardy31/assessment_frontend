@@ -1,6 +1,6 @@
 <template>
   <v-card elevation="4" flat class="pb-4 mx-6 mx-sm-4 mx-md-0 mx-lg-0 mx-xl-0">
-    <v-card-title class="mb-4">Number of Claims</v-card-title>
+    <v-card-title class="mb-4"><h4>Number of Claims</h4></v-card-title>
     <Bar
       :chart-options="chartOptions"
       :chart-data="chartData"

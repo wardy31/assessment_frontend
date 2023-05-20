@@ -1,6 +1,6 @@
 <template>
   <v-card flat elevation="0" class="transparent">
-    <v-card-title class="">Claims by usage</v-card-title>
+    <!-- <v-card-title class="">Claims by usage</v-card-title> -->
     <v-row>
       <v-col cols="12" sm="12" md="4">
         <v-card
@@ -8,7 +8,8 @@
           class="mx-6 mx-sm-4 mx-md-0 mx-lg-0 mx-xl-0"
         >
           <div class="py-7">
-            <h4 class="text-center mb-2">Private</h4>
+            <h4 class="mb-2 text-center">Claims by usage</h4>
+            <h4 class="text-center mb-2 text--secondary">Private</h4>
             <Doughnut
               :chart-options="chartOptions"
               :chart-data="chartData"
@@ -29,7 +30,8 @@
           class="mx-6 mx-sm-4 mx-md-0 mx-lg-0 mx-xl-0"
         >
           <div class="py-7">
-            <h4 class="text-center mb-2">Commercial</h4>
+            <h4 class="mb-2 text-center">Claims by usage</h4>
+            <h4 class="text-center mb-2 text--secondary">Commercial</h4>
             <Doughnut
               :chart-options="chartOptions"
               :chart-data="chartData2"

@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app flat color="transparent" hide-on-scroll>
-    <v-app-bar-nav-icon class="" large color="primary"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon class="" large color="primary" @click="$emit('handleDialog')"></v-app-bar-nav-icon>
     <v-toolbar-title
       ><h5>
         Welcome, <span class="primary--text ml-2">{{ user.name }}</span>

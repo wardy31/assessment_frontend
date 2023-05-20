@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer color="primary" app>
+  <v-navigation-drawer color="primary" app :value="dialogProps">
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="text-h5 font-weight-bold white--text"
@@ -23,6 +23,12 @@
     </v-list>
   </v-navigation-drawer>
 </template>
+
+<script>
+export default{
+  props:['dialogProps']
+}
+</script>
 
 <style scoped>
 .border {

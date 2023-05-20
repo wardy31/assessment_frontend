@@ -1,10 +1,11 @@
 <template>
   <v-app>
-    <SideBar />
-    <AppBar />
+    <SideBar :dialogProps="dialogProps"/>
+    <AppBar  @handleDialog="handleDialog" />
     <v-main class="bg">
-      <v-container class="mx-12 mx-lg-8 mx-xl-8 mt-4">
-        <h2 class="accent--text mb-6">Dashboard</h2>
+      <v-container class="px-2 px-lg-8 px-xl-8 mt-4">
+        <h1 class="accent--text mb-12" v-if="!$vuetify.breakpoint.mobile">Dashboard</h1>
+        <h2 class="accent--text mb-12 ml-6" v-else>Dashboard</h2>
         <UsageClaims />
         <v-row>
           <v-col>
@@ -162,9 +163,14 @@ export default {
     date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
       .toISOString()
       .substr(0, 10),
+    dialogProps:true
   }),
   methods: {
     allowedDates: (val) => parseInt(val.split("-")[2], 10) % 2 === 0,
+    handleDialog(){
+      this.dialogProps = !this.dialogProps
+      console.log(this.dialogProps)
+    }
   },
 };
 </script>
